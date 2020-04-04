@@ -27,14 +27,11 @@ router.delete('/:id', async (req, res) => {
 });
 
 async function loadPostsCollection() {
-  const client = await mongodb.MongoClient.connect(
-    'mongodb://YOUR_OWN_MONGODB',
-    {
+  const client = await mongodb.MongoClient.connect
+    ("mongodb+srv://David:mitra2020@cluster0-ml1g6.mongodb.net/test?retryWrites=true&w=majority", {
       useNewUrlParser: true
-    }
-  );
-
-  return client.db('vue_express').collection('posts');
+  });
+  return client.db("Cluster0").collection("bets");
 }
 
 module.exports = router;
